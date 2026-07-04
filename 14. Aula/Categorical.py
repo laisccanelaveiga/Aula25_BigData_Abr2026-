@@ -2,12 +2,13 @@ import polars as pl
 from datetime import datetime
 
 
-ENDERECO_DADOS = './../DADOS/'
+ENDERECO_DADOS = './../DADOS/bolsa_familia/'
 
 try:
     inicio = datetime.now()
     print('Carregando...')
     # Uso do Categorical para maximizar a performance da RAM
+    # Uso do Categorical para comparar os municípios repetidos
     df_scan = (
         pl.scan_parquet(ENDERECO_DADOS + 'bolsa_familia.parquet')
         .select(['NOME MUNICÍPIO' , 'VALOR PARCELA'])

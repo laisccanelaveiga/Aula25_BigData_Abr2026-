@@ -5,7 +5,7 @@ import polars as pl
 from datetime import datetime
 
 
-ENDERECO_DADOS = './../DADOS/'
+ENDERECO_DADOS = './../DADOS/bolsa_familia/'
 
 try:
     # Lendo parquet - Leitura Direta
